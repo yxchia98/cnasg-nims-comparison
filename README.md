@@ -2,10 +2,10 @@
 Comparison with NIMs by CNASG
 ## Running Llama3-8b-Instruct NIM on-prem
 ### Some Reference Materials
-https://developer.nvidia.com/blog/a-simple-guide-to-deploying-generative-ai-with-nvidia-nim/ 
-https://docs.nvidia.com/nim/large-language-models/latest/profiles.html 
-https://docs.nvidia.com/nim/large-language-models/latest/getting-started.html 
-https://build.nvidia.com/meta/llama-3_1-8b-instruct?snippet_tab=Docker 
+[https://developer.nvidia.com/blog/a-simple-guide-to-deploying-generative-ai-with-nvidia-nim/](https://developer.nvidia.com/blog/a-simple-guide-to-deploying-generative-ai-with-nvidia-nim/)
+[https://docs.nvidia.com/nim/large-language-models/latest/profiles.html](https://docs.nvidia.com/nim/large-language-models/latest/profiles.html) 
+[https://docs.nvidia.com/nim/large-language-models/latest/getting-started.html](https://docs.nvidia.com/nim/large-language-models/latest/getting-started.html) 
+[https://build.nvidia.com/meta/llama-3_1-8b-instruct?snippet_tab=Docker](https://build.nvidia.com/meta/llama-3_1-8b-instruct?snippet_tab=Docker) 
 ### Setting up NIM
 Setup NGC Credentials
 ```docker login nvcr.io
@@ -43,6 +43,7 @@ Test to see if NIMs endpoint is reachable
 
 ### Setting up Environment
 Start Jupyter Notebook
-```docker run -it -d --rm --gpus device=1 --net host --name jupyter -v $PWD:/home/jovyan/work quay.io/jupyter/scipy-notebook:latest start-notebook.py --NotebookApp.token='password' --ip="0.0.0.0"
+```
+docker run -it -d --rm --gpus device=1 --net host --name jupyter -v $PWD:/home/jovyan/work quay.io/jupyter/scipy-notebook:latest start-notebook.py --NotebookApp.token='password' --ip="0.0.0.0"
 ```
 Go to: http://<YOUR-JUPYTER-VM-IP-ADDRESS>:8888 , for example http://172.27.193.230:8888 
